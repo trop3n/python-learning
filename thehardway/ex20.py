@@ -1,33 +1,31 @@
-from sys import argv
+def add(a, b):
+    print(f"ADDING {a} + {b}")
+    return a + b
 
-script, input_file = argv
+def subtract(a, b):
+    print(f"SUBTRACTING {a} = {b}")
+    return a - b
 
-def print_all(f):
-    print(f.read())
+def multiply(a, b):
+    print(f"MULTIPLYING {a} * {b}")
+    return a * b
 
-def rewind(f):
-    f.seek(0)
+def divide(a, b):
+    print(f"DIVIDING {a} / {b}")
+    return a / b
 
-def print_a_line(line_count, f):
-    print(line_count, f.readline())
+print("Let's do some math with just functions!")
 
-current_file = open(input_file)
+age = add(30, 5)
+height = subtract(78, 4)
+weight = multiply(90, 2)
+iq = divide(100, 2)
 
-print("First let's print the whole file:\n")
+print(f"Age: {age}, Height: {height}, Weight: {weight}, IQ: {iq}")
 
-print_all(current_file)
+# a puzzle for extra credit, type it in anyway
+print("Here is a puzzle.")
 
-print("Now, let's rewind, kind of like a tape.")
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
 
-rewind(current_file)
-
-print("Let's print three lines:")
-
-current_line = 1
-print_a_line(current_line, current_file)
-
-current_line = current_line + 1
-print_a_line(current_line, current_file)
-
-current_line = current_line + 1
-print_a_line(current_file, current_file)
+print("That becomes: ", what, "Can you do it by hand?")
