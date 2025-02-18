@@ -20,7 +20,7 @@ class Square(Shape):
         return self.side ** 2
 
 class Circle(Shape):
-    def __init__(self, name):
+    def __init__(self, name, radius):
         super().__init__(name)
         self.radius = radius
     def perimeter(self):
