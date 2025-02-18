@@ -34,3 +34,17 @@ for thing in examples:
     p = thing.parimeter()
     a = thing.area()
     print(f"{n} has perimeter {p:.2f} and area {a:.2f}")
+
+def square_perimeter(thing):
+    return 4 * thing["side"]
+
+def square_area(thing):
+    return thing["side"] ** 2
+
+def square_new(name, side):
+    return {
+        "name": name,
+        "side": side,
+        "perimeter": square_perimeter,
+        "area": square_area
+    }
