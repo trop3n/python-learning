@@ -47,6 +47,9 @@ def square_new(name, side):
         "area": square_area
     }
 
+def circle_perimeter(thing):
+    return 
+
 def call(thing, method_name):
     return thing[method_name](thing)
 
