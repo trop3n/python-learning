@@ -20,5 +20,12 @@ protocolList.remove("SSH")
 count = len(protocolList)
 # print("Protocol elements "+ str(count))
 
+print(protocolList)
+protocolList.pop()
+print(protocolList)
+protocolList.reverse()
+print(protocolList)
+
+
 for protocol in protocolList:
     print(protocol)
