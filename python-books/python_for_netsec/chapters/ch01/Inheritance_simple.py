@@ -1,3 +1,5 @@
+# lesson on classes and objects
+
 class BaseClass:
     def __init__(self, property):
         self.property = property
@@ -19,3 +21,9 @@ if __name__ == '__main__':
     child_obj = ChildClass('property')
     child_obj.message()
     child_obj.message_base_class()
+
+print(issubclass(ChildClass, BaseClass))
+print(issubclass(BaseClass, ChildClass))
+print(isinstance(base_obj, BaseClass))
+print(isinstance(child_obj, ChildClass))
+print(isinstance(child_obj, BaseClass))
