@@ -12,3 +12,10 @@ class ChildClass(BaseClass):
     def message(self):
         print('Welcome to ChildClass')
         print('This is inherited from BaseClass')
+
+if __name__ == '__main__':
+    base_obj = BaseClass('property')
+    base_obj.message()
+    child_obj = ChildClass('property')
+    child_obj.message()
+    child_obj.message_base_class()
