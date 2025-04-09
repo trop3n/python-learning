@@ -16,3 +16,4 @@ if __name__ == '__main__':
     child_obj.message()
     child_obj.message_main()
     child_obj.message_main2()
+
