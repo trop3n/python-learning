@@ -19,3 +19,10 @@ if __name__ == "__main__":
                         help="verbosity level: -v, -vv, -vvv.")
     parser.add_argument("--open", dest="only_open", action="store_true",
                         help="only display open ports", default=False)
+    params = parser.parse_args()
+    print("Target:" + params.target)
+    print("Verbosity:" + str(params.verbosity))
+    print("Only open:" + str(params.only_open))
+    portlist = params.ports.split(',')
+    for port in portlist:
+        print("Port:" + port)
