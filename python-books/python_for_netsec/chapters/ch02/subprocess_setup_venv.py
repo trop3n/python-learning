@@ -15,3 +15,9 @@ if create_venv.returncode == 0:
     print(f'Your venv {VENV_NAME} has been created')
 else:
     print(f'Your venv {VENV_NAME} has not been created')
+pip_process = f'{VENV_NAME}/bin/pip3'
+if Path(REQUIREMENTS).exists():
+    print(f'Requirements file "{REQUIREMENTS}" found')
+    print('Installing requirements')
+    subprocess.run([pip_process, 'install', '-r', REQUIREMENTS])
+print('Process completed! Now activate your environment with "source .venv/bin/activate"')
