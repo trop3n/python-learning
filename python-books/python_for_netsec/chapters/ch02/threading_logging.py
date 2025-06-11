@@ -13,3 +13,16 @@ def check_state(thread):
         print(f'Thread {thread.name} is alive.')
     else:
         print(f'Thread {thread.name} is not alive.')
+
+th1 = threading.Thread(target=thread, args=('MyThread',))
+th2 = threading.Thread(target=thread, args=('MyThread2',))
+th1.setDaemon(True)
+th1.start()
+th2.start()
+check_state(th1)
+check_state(th2)
+while(th1.is_alive()):
+    logging.debug('Thread is executing...')
+    time.sleep(1)
+th1.join()
+th2.join()
