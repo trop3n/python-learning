@@ -13,3 +13,13 @@ def check_state(process):
         print(f'Process {process.name} is alive.')
     else:
         print(f'Process {process.name} is not alive.')
+
+if __name__ == '__main__':
+    process = multiprocessing.Process(target=thread, args=('MyProcess',))
+    process2 = multiprocessing.Process(target=thread, args=('MyProcess2',))
+    check_state(process)
+    check_state(process2)
+    process.start()
+    process2.start()
+    check_state(process)
+    check_state(process2)
