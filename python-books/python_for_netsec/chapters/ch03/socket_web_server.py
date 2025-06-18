@@ -7,5 +7,5 @@ while True:
     data = sock.recv(512)
     if len(data) < 1:
         break
-    print(data.encode(),end='')
+    print(data.decode(),end='')
 sock.close()
